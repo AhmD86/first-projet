@@ -9,21 +9,39 @@ body{
     background-color: #000845;
 }
 .header{
-    width: 100%;
-    height: 70px;
+    width: 99%;
+    height: 60px;
+    margin: 5px .5%;
     position: fixed;
     z-index: 7;
 }
 .header img{
-    margin-left: 50px;
+    margin:5px 50px;
     float: left;
     border-radius: 20px;
-    background-color: rgb(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, 0.715);
+}
+.input-overload{
+    position: absolute;
+    font-size:20px;
+    margin: 10px;
+    color: #161b44;
+}
+ul li.header-input{
+    padding-left: 10px;
+    position: relative;
+}
+.header input{
+    height: 35px;
+    width: 250px;
+    border-radius: 20px;
+    padding-left: 50px;
+    font-size: 20px;
 }
 .header li {
     list-style: none;
-    font-size: 25px;
-    line-height: 70px;
+    font-size: 20px;
+    line-height: 60px;
     display: inline-block;
     margin-left: 20px;
 }
@@ -34,19 +52,21 @@ body{
 .header .left{
     float: left;
     margin-left: 20px;
+    margin-top: -5px;
 }
 .header .right{
     float: right;
     margin-right: 20px;
+    margin-top: -5px;
 }
-.header ul li div{
+.header-width{
     visibility: hidden;
     width:0;
     margin-top: -20px;
     border: 3px solid  white;
     border-radius: 3px;
 }
-.header ul li:hover div{
+.header li:hover .header-width{
     width: 100%;
     visibility: visible;
     transition: .5s;
@@ -58,11 +78,19 @@ body{
 /* //////////////////////////////// */
 .home-section{
     position: relative;
-    height: 100vh;
-    width: 100%;
+    height: 80vh;
+    width: 90%;
+    margin: auto;
     background-color: #000845;
     background-image: url(../images/ad_personam_slide_01.webp);
     background-size: 90% 110%;
+    border-radius: 50px;
+    border: 7px solid white;
+}
+.home-padding{
+    padding-top: 80px;
+    height: 10px;
+    width: 100%;
 }
 .home-overlay{
     position: absolute;
@@ -70,30 +98,8 @@ body{
     height: 0;
     width: 100%;
     height: 100%;
-    background-color:  rgba(0, 0, 0, .7);
-}
-.home-right , .home-left{
-    background-color: rgb(0, 0, 0);
-    opacity: 0;
-    width: 7%;
-    height: 25%;
-    margin-top:300px ;
-    font-size: 70px;
-    border: 0;
-    color: white;
-    border-radius: 30px;
-}
-.home-section:hover .home-right , .home-section:hover .home-left{
-    opacity: .4;
-}
-.home-section .home-right:hover , .home-section .home-left:hover{
-    opacity: .8;
-}
-.home-right{
-    margin-left: 75%;
-}
-.home-left{
-    margin-left: 90px;
+    border-radius: 50px;
+    background-color:  rgba(0, 0, 0, .5);
 }
 .home-text{
     position: absolute;
@@ -108,20 +114,20 @@ body{
     opacity: 1;
 }
 .home-text h1{
-    font-size: 60px;
+    font-size: 50px;
 }
 .home-text p{
-    font-size: 30px;
+    font-size: 25px;
     word-spacing: 3px;
     letter-spacing: 1px;
     line-height: 30px;
     margin-bottom: 10px;
 }
 .home-btn{
-    height: 60px;
+    height: 50px;
     width: 150px;
     font-size: 20px;
-    border-radius: 7px;
+    border-radius: 15px;
 }
 .home-btn2{
     background-color:#00108ab4;
@@ -135,6 +141,9 @@ body{
     height: 100vh;
     width: 100%;
     background-color: #000845;
+}
+.portfoilo-section .portfoilo-container{
+    padding-left:7%;
 }
 .portfoilo-section h1{
     padding: 50px 10px 10px 0;
@@ -153,11 +162,11 @@ body{
     padding-top: 200px;
 }
 .portfoilo-item{
-    width: 30%;
+    width: 25%;
     float: left;
-    padding: 20px 30px;
+    padding: 20px 15px;
     text-align: center;
-    border: 2px solid gray;
+    border: 7px solid white;
     position: relative;
     border-radius: 30px;
     background-color: rgb(188, 188, 188);
@@ -170,14 +179,13 @@ body{
     left: 0;
     height: 0;
     width: 0;
-    background-color: black;
+    background-color: #3c4375;
     opacity: 1;
     transition: .7s;
 }
 .portfoilo-item:hover:after{
     width: 100%;
     height: 100%;
-    opacity: .6;
 }
 .portfoilo-content{
     position: relative;
@@ -185,11 +193,11 @@ body{
 }
 .portfoilo-item:hover a , .portfoilo-item:hover i{
     visibility: visible;
-    color:rgb(188, 188, 188);
+    color: white;
     transition: .7s;
 }
 .portfoilo-margin{
-    margin: 0 5%;
+    margin: 0 7.5%;
 }
 .portfoilo-item i{
     font-size:40px;
@@ -201,11 +209,12 @@ body{
     padding-bottom: 20px;
     font-size: 25px;
     line-height: 20px;
+    color:  #000845;
 }
 .portfoilo-item p{
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    padding-bottom: 30px;
+    font-size: 18px;
+    color: rgb(72, 72, 72);
+    padding-bottom: 20px;
     line-height: 30px;
 }
 .portfoilo-item a{
@@ -216,9 +225,9 @@ body{
     color: black;
 }
 .portfoilo-item:hover h2{
-    color: #ffffff;
-    transition:color .7s;
-    font-size:3px;
+    color:white;
+    font-size:2px;
+    padding-bottom: 20px;
 } 
 .portfoilo-item:hover p{
     color: rgb(255, 255, 255);
@@ -252,10 +261,9 @@ body{
     width: 30%;
     height: 11.75em;
     border-radius: 20px;
-    border: 2px solid grey;
+    border: 7px solid rgb(255, 255, 255);
     float: left;
     position: relative;
-    padding: 20px  20px;
     background-image:url(../images/images5.jpeg);
     background-size: 100% 100%;
     margin-top: 50px;
@@ -288,47 +296,41 @@ body{
     width: 0;
     height: 0;
     background-color: rgba(0, 0, 0);
-    transition: 1s;
+    transition: .5s;
+    opacity: .3;
 }
 .offer-parent:hover::before{
     width: 100%;
     height: 100%;
-    opacity: .3;
-}
-.offer-parent:hover .offer-child{
-    display: block;
 }
 .offer-child{
     position: absolute;
     z-index: 1;
-    border: 2px solid gray;
-    height: 40%;
-    width: 30%;
-    display: none;
+    border: 3px solid gray;
+    top: 5%;
+    left: 4%;
+    height: 90%;
+    width: 92%;
+    opacity: 0;
     cursor: pointer;
-    font-size: 50px;
     color:rgb(188, 188, 188);
-    padding: 10px  30px;
+    padding: 15px  5px;
     border-radius: 20px;
 }
-.offer-child3 i , .offer-child4 i {
-    margin-left: -13px;
+.offer-parent:hover .offer-child{
+    opacity: 1;
+    transition: 1s;
 }
-.offer-child:hover{
-    opacity: .7;
+.offer-child i{
+    margin: 0px 25px 20px 5px;
+    float: left;
+    font-size: 25px;
 }
-.offer-child2{
-   right: 20px;
-}
-.offer-child3 , .offer-child4{
-    bottom: 20px;
-    height: 30%;
-    width: 20%;
-    margin-left: 22%;
-    font-size: 35px;
-}
-.offer-child4{
-margin-left: 47%;
+.offer-child p{
+    width: 250px;
+    margin-left: 50px;
+    line-height: 25px;
+    margin-top: 20px;
 }
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 .pricing-section{
@@ -337,7 +339,6 @@ margin-left: 47%;
 }
 .pricing-section h1{
     text-align: center;
-    padding-top: 0px;
     font-size: 60px;
     color: rgb(251, 249, 249);
 }
@@ -352,29 +353,29 @@ margin-left: 47%;
     float: left;
     height: 80%;
     border-radius: 30px;
-    padding: 1.5% 40px 0 40px;
+    padding:15px 20px;
     background-color: rgb(188, 188, 188);
-    border: 5px solid white;
+    margin-top: -15px;
+    border: 7px solid white;
 }
 .pricing-content-margin{
-    margin: 0 5%;
+    margin: -15px 5%;
 }
 .pricing-item{
-    height: 30%;
+    height: 47%;
     text-align: center;
-    padding:20px 50px 20px 50px;
-    border-radius: 30px;
+    border-radius: 35px;
     position: relative;
     border: 5px solid white;
 }
 .pricing-item-child{
     position: absolute;
-    border-radius: 30px;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    padding-top: 5px;
+    border-radius: 35px;
+    top: 5%;
+    right: 5%;
+    height: 90%;
+    width: 90%;
+    padding: 5px;
 }
 .price-overlay{
     position: absolute;
@@ -391,56 +392,68 @@ margin-left: 47%;
     background-size: 100% 100%;
 }
 .pricing-item:hover .pricing-item-child2{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 2;
 }
 .price-margin{
-    margin: 4% 0;
+    margin-bottom:30px ;
 }
 .pricing-item-child2{
     background-color:#00084582;
 }
 .pricing-item-child2 > h2{
-    padding: 5px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 27px;
     color: rgb(188, 188, 188);
 }
 .pricing-circle{
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     background-color:white;
-    margin: auto;
+    margin:0  auto 10px;
     padding-top: 5px;
     border: 2px solid black;
 }
 .pricing-circle:hover h2{
-    font-size: 0;
-    padding-bottom: 10px;
+    display: none;
 }
 .pricing-circle h2{
-    font-size: 33px;
+    font-size: 55px;
+}
+.pricing-circle p{
+    display: none;
+}
+.pricing-circle:hover p{
+    font-size: 25px;
+    padding-top: 20px;
+    display: block;
 }
 .pricing-item-child2 > p{
-    display:inline ;
-    padding: 3px 5px;
+    display: inline;
     font-size: 13px;
     color: #ffffff;
+    line-height: 20px;
 }
 .pricing-item-child2 > a{
     text-decoration: none;
     color:rgb(188, 188, 188);
     font-size: 13px;
     padding-right: 10px 60px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 .pricing-item-child2 > button{
-    margin: 15px auto 0 0;
+    display: block;
+    margin: 15px auto;
     height: 25px;
     border-radius: 5px;
     width: 150px;
     font-size: 15px;
-    background-color: rgb(188, 188, 188);
-    color: #000000;
+    background-color: rgb(138, 138, 138);
+    color: #ffffff;
     cursor: pointer;
     border: 0;
     text-transform: capitalize;
@@ -475,8 +488,8 @@ margin-left: 47%;
 }
 .about-image img{
     width: 500px;
-    height: 500px;
-    margin-left: 35px;   
+    height: 450px;
+    margin:50px 35px;   
 }
 .about-image i{
     float: right;
@@ -493,10 +506,10 @@ margin-left: 47%;
 }
 .about-info h2{
     font-size: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 .about-info p{
-    padding-bottom:30px;
+    padding-bottom:10px;
     font-size: 20px;
     line-height: 30px;
     word-spacing: 3px;
@@ -512,25 +525,33 @@ margin-left: 47%;
     color: #ffffff;
 }
 .about-circle{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     border: 3px solid black;
     border-radius: 50%;
     background-color:#ffffff;
     color: rgb(0, 0, 0);
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-left: 150px;
     cursor: pointer;
-    margin-top: -30px;
     transition: .5s;
 }
-.about-circle:hover{
-    background-color:  #000845;
-    color: #ffffff;
+.about-circle-inline{
+    float: left;
+    margin: 0 20px 0 0;
+}
+.about-circle-indicat{
+    color:#ffffff ;
+    background-color: #000845;
+    margin: -25px 150px;
+}
+.about-circle-indicat:hover{
+    background-color: #ffffff;
+    color:#000845;
 }
 .about-circle i{
-    line-height: 60px;
+    line-height: 40px;
     margin-left: 5px;
 }
 .about-floor{
@@ -589,7 +610,7 @@ margin-left: 47%;
     color: rgb(0, 0, 0);
     font-size: 50px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 .technical-section span{
     display: block;
@@ -599,25 +620,29 @@ margin-left: 47%;
 }
 .technical-content{
     width: 80%;
-    overflow: auto;
     margin: auto;
-    margin-top: 150px;
+    margin-top:50px;
 }
 .technical-items{
-    float: left;
-    width: 40%;
-    margin-left: 7.5%;
+    border-radius: 30px;
+    height:270px;
+    padding:27px;
+    width: 80%;
+    margin: 50px auto;
 }
 .technical-item{
+    width: 27.5%;
+    height: 250px;
+    background-color: #2e356a;
     float: left;
-    border: 5px solid white;
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 30px;
-    padding: 5px;
-    margin: 0 40px 40px 0;
+    padding: 20px;
     position: relative;
+    text-align: center;
 }
-.technical-item:hover{
-    z-index: 2;
+.technical-margin{
+    margin:0 8.75%;
 }
 .technical-text{
     position: absolute;
@@ -629,28 +654,30 @@ margin-left: 47%;
     border-radius: 30px;
     background-color: rgb(0, 0, 0, .7);
     opacity: 0;
+    padding-top: 20px;
 }
 .technical-item:hover .technical-text{
     transition: .5s;
     opacity: 1;
 }
 .technical-text i{
-    color:rgb(188, 188, 188);
+    color: #3d4ecf;
     font-size: 40px;
-    margin-left: 35px;
-    margin-top: 50px;
+   padding-left: 10px;
+   visibility: hidden;
+}
+.technical-item:hover .technical-text i{
+    visibility: visible;
+    transition: 1s;
+}
+.technical-item:hover .technical-text h2{
+    visibility: visible;
+    transition: 1s;
 }
 .technical-text h2{
-    color:rgb(188, 188, 188);
-    margin: 50px;
-}
-.technical-position{
-    position: absolute;
-    margin:120px 120px;
-    z-index: 0;
-}
-.tech-index{
-    z-index: 1;
+    color: #5b67c5;
+    margin: 25px 20px;
+    visibility: hidden;
 }
 /* //////////////////////////////////////////// */
 .services-section{
@@ -667,8 +694,9 @@ margin-left: 47%;
     top: 20%;
     bottom: 35%;
     border-radius:50px;
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
+    border: 7px solid white;
 }
 .services-overlay{
     position: fixed;
@@ -680,48 +708,9 @@ margin-left: 47%;
     color: #ffffff;
     border-radius: 50px;
 }
-.services-header{
-    width: 100%;
-    height: 80px;
-}
-.services-header ul  , .services-header button , .services-header  p {
-    float: left;
-    line-height: 80px;
-}
-.services-header  p{
-    font-size: 25px;
-}
-.services-header ul li{
-    float: left;
-    margin-left: 20px;
-    list-style: none;
-}
-.services-header ul li a{
-    color: #ffffff;
-    text-decoration: none;
-}
-.services-header button{
-    margin:0 100px 0 650px ;
-    font-size: 25px;
-    background-color: inherit;
-    border: 0;
-    color: #ffffff;
-    cursor: pointer;
-}
-.services-header ul li div{
-    visibility: hidden;
-    width:0;
-    border: 3px solid rgb(188, 188, 188);
-    border-radius: 3px;
-}
-.services-header ul li:hover div{
-    width: 100%;
-    visibility: visible;
-    transition: .5s;
-}
 .services-content{
     width: 80%;
-    margin:20px auto;
+    margin:70px auto;
     overflow: auto;
 }
 .services-item{
@@ -776,12 +765,16 @@ margin-left: 47%;
     width: 30%;
     float: left;
     height: 65%;
-    border: 2px solid grey;
+    border: 5px solid rgb(111, 111, 111);
     border-radius: 20px;
     text-align: center;
     position: relative;
     padding-bottom: 25px;
     background-color:  rgb(188, 188, 188);
+}
+.news-item:hover{
+    border: 5px solid white;
+    transition: .5s;
 }
 .news-overlay{
     position: absolute;
@@ -857,8 +850,9 @@ margin-left: 47%;
     background-size: 100% 120%;
     background-attachment: fixed;
     border-radius:50px;
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
+    border: 7px solid white;
 }
 .about-team-overlay{
     position: absolute;
@@ -934,7 +928,7 @@ margin-left: 47%;
     float: left;
     margin: 9% 0;
     padding: 20px 20px;
-    border: 2px solid gray;  
+    border: 5px solid rgb(255, 255, 255); 
     position: relative; 
     background-color: rgb(188, 188, 188); 
     border-radius: 25px;
@@ -966,6 +960,7 @@ margin-left: 47%;
 }
 .team-image img{
     border-radius: 25px;
+    border: 5px solid rgb(61, 61, 61);
 }
 .team-overlay{
     position: absolute;
@@ -1032,6 +1027,7 @@ margin-left: 47%;
     width:250px;
     height:150px;
     margin: auto;
+    outline: 5px solid white;
 }
 .footer-overlay{
     position: absolute;
@@ -1049,10 +1045,13 @@ margin-left: 47%;
     float: left;
     border: 3px;
     background-color:#000845;
+    outline: 5px solid white;
+    margin: 5px;
 }
 .footer-a-con{
-    width: 400px;
-    margin:10px auto;
+    height: 60px;
+    width: 450px;
+    margin:20px auto;
     overflow: auto;
 }
 .footer-a a{
