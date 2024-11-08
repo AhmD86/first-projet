@@ -14,6 +14,9 @@ body{
     margin: 5px .5%;
     position: fixed;
     z-index: 7;
+    background-color: #000845;
+    border: 3px solid white;
+    border-radius: 30px;
 }
 .header img{
     margin:5px 50px;
@@ -108,10 +111,6 @@ ul li.header-input{
     transform: translate(-50% ,-50%);
     color: aliceblue;
     text-align: center;
-    opacity: .4;
-}
-.home-section:hover .home-text{
-    opacity: 1;
 }
 .home-text h1{
     font-size: 50px;
@@ -191,11 +190,6 @@ ul li.header-input{
     position: relative;
     z-index: 2;
 }
-.portfoilo-item:hover a , .portfoilo-item:hover i{
-    visibility: visible;
-    color: white;
-    transition: .7s;
-}
 .portfoilo-margin{
     margin: 0 7.5%;
 }
@@ -203,7 +197,6 @@ ul li.header-input{
     font-size:40px;
     color: rgb(0, 0, 0);
     padding-bottom: 20px;
-    visibility: hidden;
 }
 .portfoilo-item h2{
     padding-bottom: 20px;
@@ -221,14 +214,20 @@ ul li.header-input{
     text-decoration: none;
     font-size: 25px;
     padding-bottom: 20px;
-    visibility: hidden;
     color: black;
+}
+.portfoilo-item a:hover{
+    color: grey;
 }
 .portfoilo-item:hover h2{
     color:white;
     font-size:2px;
     padding-bottom: 20px;
 } 
+.portfoilo-item:hover a , .portfoilo-item:hover i{
+    color: #cacaca;
+    transition: 1s;
+}
 .portfoilo-item:hover p{
     color: rgb(255, 255, 255);
     transition: .7s;
@@ -493,7 +492,7 @@ ul li.header-input{
 }
 .about-image i{
     float: right;
-    margin:250px 0 25px 25px;
+    margin:250px 0 25px 0px;
     font-size: 30px;
     color: rgb(255, 255, 255);
 }
@@ -661,7 +660,7 @@ ul li.header-input{
     opacity: 1;
 }
 .technical-text i{
-    color: #3d4ecf;
+    color: #cacaca;
     font-size: 40px;
    padding-left: 10px;
    visibility: hidden;
@@ -675,7 +674,7 @@ ul li.header-input{
     transition: 1s;
 }
 .technical-text h2{
-    color: #5b67c5;
+    color: #cacaca;
     margin: 25px 20px;
     visibility: hidden;
 }
@@ -983,6 +982,7 @@ ul li.header-input{
     color:rgb(188, 188, 188);
     font-size: 20px;
     border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.705);
 }
 .team-overlay a i{
     line-height: 50px;
